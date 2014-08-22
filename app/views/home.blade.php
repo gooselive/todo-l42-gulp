@@ -1,13 +1,7 @@
 @extends('layouts.main')
 
 @section('nav')
-<div class="navbar navbar-default">
-  <div class="navbar-collapse collapse navbar-responsive-collapse">
-    <ul class="nav navbar-nav navbar-right">
-          <li>{{ HTML::link('logout', 'Logout') }}</li>
-    </ul>
-  </div>
-</div>
+	<li>{{ HTML::link('logout', 'Logout') }}</li>
 @stop
 
 @section('content')

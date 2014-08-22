@@ -16,6 +16,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
+	public static $rules = array(
+		'name' => 'required|unique:users',
+		'email' => 'required|unique:users',
+		'password' => 'required' 
+		);
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *

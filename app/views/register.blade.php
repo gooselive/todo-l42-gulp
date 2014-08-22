@@ -1,14 +1,41 @@
 @extends('layouts.main')
 
 @section('nav')
-<div class="navbar navbar-default">
-  <div class="navbar-collapse collapse navbar-responsive-collapse">
-    <ul class="nav navbar-nav navbar-right">
-    </ul>
-  </div>
-</div>
+@stop
 
 @section('content')
-	<h1>Register</h1>
+
+<div class="col-md-4 col-md-offset-4">
+      <div class="panel panel-info">
+        <div class="panel-heading">Please Register</div>
+        <div class="panel-body">
+            {{ Form::open(array('url' => 'register')) }}
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+                    {{ implode('', $errors->all('<li class="error">:message</li>')) }}
+                </div>
+            @endif
+            <div class="form-group">
+                {{ Form::label('username', 'Username') }}
+                {{ Form::text('name', '', array('class' => 'form-control', 'placeholder' => 'Username')) }}
+            </div>
+            <div class="form-group">
+                {{ Form::label('email', 'Email Address') }}
+                {{ Form::text('email', '', array('class' => 'form-control', 'placeholder' => 'Email Address')) }}
+            </div>
+            <div class="form-group">
+                {{ Form::label('password', 'Password') }}
+                {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password')) }}
+            </div>
+            <div class="form-group">
+                {{ Form::submit('Register', array('class' => 'btn btn-success')) }}
+                {{ HTML::link('/', 'Cancel', array('class' => 'btn btn-danger')) }}
+            </div>
+            {{ Form::close() }}
+        </div>
+      </div>
+</div>
+
 
 @stop

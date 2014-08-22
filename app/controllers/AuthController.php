@@ -40,5 +40,24 @@ class AuthController extends Controller {
 
 	public function postRegister() {
 
+		$input = Input::all();
+
+		$v = Validator::make($input, User::$rules);
+
+		if($v->passes())
+		{
+			$user = new User;
+
+			$user->name = Input::get('name');
+			$user->email = Input::get('email');
+			$user->password = Hash::make(Input::get('password'));
+			$user->save();
+
+			return Redirect::to('login');
+
+		}
+
+		return Redirect::to('register')->withErrors($v);
 	}
+
 }
