@@ -6,7 +6,7 @@
 @section('content')
 
 <div class="col-md-4 col-md-offset-4">
-      <div class="panel panel-info">
+      <div class="panel panel-success">
         <div class="panel-heading">Please Register</div>
         <div class="panel-body">
             {{ Form::open(array('url' => 'register')) }}
