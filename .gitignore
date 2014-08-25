@@ -3,4 +3,3 @@
 .env.*.php
 vendor
 node_modules
-/app/storage
