@@ -17,7 +17,7 @@ class CreateItemsTable extends Migration {
 			$table->increments('id');
 			$table->integer('owner_id');
 			$table->string('name');
-			$table->boolean('done');
+			$table->boolean('done')->default(false);
 			$table->timestamps();
 		});
 	}

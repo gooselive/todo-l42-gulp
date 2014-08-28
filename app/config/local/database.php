@@ -34,9 +34,9 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'homestead',
-			'username' => 'homestead',
-			'password' => 'secret',
+			'database'  => $_ENV['DATABASE'],
+			'username'  => $_ENV['USER'],
+			'password'  => $_ENV['PASS'],
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
