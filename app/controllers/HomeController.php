@@ -15,19 +15,19 @@ class HomeController extends BaseController {
 	public function postIndex()
 	{
 		$id = Input::get('id');
-
 		$item = Item::findOrFail($id);
-		
+				
 		if ($item->owner_id == Auth::user()->id) {
 			$item->mark();
-		}
+			}
 
 		return Redirect::route('home');
 	}
-
+	
 	public function getNew() {
 		return View::make('new');
 	}
+
 
 	public function postNew() {
 		$rules = array('name' => 'required|min:3|max:255');

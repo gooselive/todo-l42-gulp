@@ -51,6 +51,11 @@ App::error(function(Exception $exception, $code)
 	Log::error($exception);
 });
 
+App::error(function(Illuminate\Session\TokenMismatchException $exception)
+{
+	return Redirect::route('login');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Maintenance Mode Handler
