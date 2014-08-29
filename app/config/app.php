@@ -122,7 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-		'Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider',
+		//'Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider',
 	),
 
 	/*
