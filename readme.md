@@ -2,6 +2,14 @@
 
 A simple To Do list developed in Laravel 4.2.8
 
+Note: The production database configuration for heroku deployment was done according to this blog:
+[Laravel on Heroku - Using a PostgreSQL database - MattStauffer.co](http://mattstauffer.co/blog/laravel-on-heroku-using-a-postgresql-database)
+Because the app/config/database.php file processes an env variable from the heroku platform you will get php parse errors when developing locally. To avoid this you can either edit the database.php file, or modify your local environment by executing the following statement from the command line in your bash shell or by editing your .bashrc file:
+export DATABASE_URL="postgres://user:password@host:5432/dbname"
+
+The working application is avaulable at http://todo.gooselive.url.ph
+Because it is deployed on a free heroku development account, the server dyno goes to sleep every few hours, so initial page load may take 10-20 seconds.
+
 Features user registration and authentication, Bootstrap theming - responsive css.
 ![](screenshots/todolist.png)
 ![](screenshots/register.png)
