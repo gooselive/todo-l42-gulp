@@ -24,7 +24,7 @@ class AuthController extends Controller {
 				));
 		}
 
-		return Redirect::route('home');
+		return Redirect::home();
 	}
 
 	public function logout()

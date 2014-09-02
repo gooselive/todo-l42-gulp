@@ -310,9 +310,52 @@ table {
 /*-----------------------------------------------------------------------------------*/
 /*	*START* Base
 /*-----------------------------------------------------------------------------------*/
-
 ul.todo {
   list-style-type: none; }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #757575; }
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px; }
+
+.container .text-muted {
+  margin-top: 20px; }
+
+.dropdown-menu > li > span {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #7b8a8b;
+  white-space: nowrap; }
+
+.dropdown-menu > li > span:hover {
+  color: #1bea8b; }
+
+.aright {
+  float: right !important; }
 
 /*-----------------------------------------------------------------------------------*/
 /*	*END* Base
