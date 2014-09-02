@@ -1,15 +1,19 @@
 	function setActiveStyleSheet(title) {
-	  var i, a, main, id = "#";
+	  var i, a, main;
+	  document.getElementById('theme').innerHTML = toTitleCase(title);
 	  for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
 	    if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
 	      a.disabled = true;
-	      //document.getElementById(a.getAttribute("title")).toggleClass( "active", false );
-	      if(a.getAttribute("title") == title) a.disabled = false;
-	      document.getElementById('theme').innerHTML = toTitleCase(title);
-	      //document.getElementById(a.getAttribute("title")).toggleClass( "active", true );
+	      document.getElementById(a.getAttribute("title")).classList.remove("active");
+	      if(a.getAttribute("title") == title) 
+	      	{
+	      		a.disabled = false;
+	      		document.getElementById(title).classList.add("active");
+	      	}
 	    }
 	  }
 	}
+
 
 	function getActiveStyleSheet() {
 	  var i, a;

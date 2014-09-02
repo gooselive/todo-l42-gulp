@@ -352,7 +352,10 @@ body {
   white-space: nowrap; }
 
 .dropdown-menu > li > span:hover {
-  color: #1bea8b; }
+  background: #1bea8b; }
+
+.dropdown-menu > li > span.active {
+  background: cyan; }
 
 .aright {
   float: right !important; }

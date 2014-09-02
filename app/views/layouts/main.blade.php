@@ -59,16 +59,16 @@
 				        <li><span class="toggle" id="darkly" onclick="setActiveStyleSheet('darkly')">Darkly</span></li>
 				        <li><span class="toggle" id="flatly" onclick="setActiveStyleSheet('flatly')">Flatly</span></li>
 				        <li><span class="toggle" id="journal" onclick="setActiveStyleSheet('journal')">Journal</span></li>
-				        <li><span class="toggle" onclick="setActiveStyleSheet('lumen')">Lumen</span></li>
-				        <li><span class="toggle" id="lumen" onclick="setActiveStyleSheet('paper')">Paper</span></li>
-				        <li><span class="toggle" id="readable" onclick="setActiveStyleSheet('readable')">Readable</span></li>
+				        <li><span class="toggle" id="lumen" onclick="setActiveStyleSheet('lumen')">Lumen</span></li>
+				        <li><span class="toggle" id="paper" onclick="setActiveStyleSheet('paper')">Paper</span></li>
+				        <li><span class="toggle active" id="readable" onclick="setActiveStyleSheet('readable')">Readable</span></li>
 				        <li><span class="toggle" id="sandstone" onclick="setActiveStyleSheet('sandstone')">Sandstone</span></li>
 				        <li><span class="toggle" id="simplex" onclick="setActiveStyleSheet('simplex')">Simplex</span></li>
 				        <li><span class="toggle" id="slate" onclick="setActiveStyleSheet('slate')">Slate</span></li>
 				        <li><span class="toggle" id="spacelab" onclick="setActiveStyleSheet('spacelab')">Spacelab</span></li>
 				        <li><span class="toggle" id="superhero" onclick="setActiveStyleSheet('superhero')">Superhero</span></li>
-				        <li><span class="toggle" id="yeti" id="united" onclick="setActiveStyleSheet('united')">United</span></li>
-				        <li><span class="toggle" onclick="setActiveStyleSheet('yeti')">Yeti</span></li>
+				        <li><span class="toggle" id="united" onclick="setActiveStyleSheet('united')">United</span></li>
+				        <li><span class="toggle" id="yeti" onclick="setActiveStyleSheet('yeti')">Yeti</span></li>
 				      </ul>
 				    </li>
 		    		@yield('nav')
