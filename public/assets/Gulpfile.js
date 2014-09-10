@@ -15,13 +15,13 @@ gulp.task('styles', function () {
 });
 
 // Task scripts
-gulp.task('scripts', function() {
- 	gulp.src('js/main.js')
-    	.pipe(uglify())
-    	.pipe(rename('main.min.js'))
-    	.pipe(gulp.dest('js'))
-      .pipe(livereload());
-});
+// gulp.task('scripts', function() {
+//  	gulp.src('js/main.js')
+//     	.pipe(uglify())
+//     	.pipe(rename('main.min.js'))
+//     	.pipe(gulp.dest('js'))
+//       .pipe(livereload());
+// });
 
 // Task images
 gulp.task('images', function () {

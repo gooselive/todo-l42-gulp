@@ -11,8 +11,8 @@ styleModule.controller('StyleController', ['$scope', '$cookieStore', function($s
 		{title: 'journal', selected: false},
 		{title: 'lumen', selected: false},
 		{title: 'paper', selected: false},
-		{title: 'readable', selected: false},
-		{title: 'sandstone', selected: true},
+		{title: 'readable', selected: true},
+		{title: 'sandstone', selected: false},
 		{title: 'simplex', selected: false},
 		{title: 'slate', selected: false},
 		{title: 'spacelab', selected: false},
@@ -38,7 +38,6 @@ styleModule.controller('StyleController', ['$scope', '$cookieStore', function($s
 			if ($scope.styles[i].selected) {
 				$scope.currentStyle = $scope.styles[i].title;
 				$cookieStore.put('saveStyle', $scope.currentStyle);
-				$scope.currentStyle = $cookieStore.get('saveStyle');
 			};
 		};
 	}
@@ -46,8 +45,7 @@ styleModule.controller('StyleController', ['$scope', '$cookieStore', function($s
 	for (var i = $scope.styles.length - 1; i >= 0; i--) {
 		if ($scope.styles[i].selected) {
 			$scope.currentStyle = $scope.styles[i].title;
-			$cookieStore.put('saveStyle', $scope.currentStyle);
-			$scope.currentStyle = $cookieStore.get('saveStyle');
+			$scope.currentStyle = $cookieStore.get('saveStyle') || 'readable';
 		};
 	};
 
